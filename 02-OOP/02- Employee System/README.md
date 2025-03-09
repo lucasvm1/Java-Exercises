@@ -1,44 +1,69 @@
-# 💼 Sistema de Funcionários em Java
+# Sistema de Funcionários em Java / Employee System in Java
 
-## 🔍 Descrição
-Este projeto implementa um sistema básico de funcionários utilizando **Programação Orientada a Objetos (POO)** em Java. Ele simula diferentes tipos de funcionários, aplicando **bônus salariais específicos** para cada cargo.
+[Português](#português) | [English](#english)
 
-## 📚 Classes Implementadas
-### **1. `Funcionario`**
-Classe base que representa um funcionário genérico.
+---
 
-**Atributos:**
-- `nome` (String) - Nome do funcionário.
-- `salario` (double) - Salário base do funcionário.
+<a id="português"></a>
+## Português
 
-**Métodos:**
-- `getNome()`, `setNome(String nome)`: Obtém e define o nome do funcionário.
-- `getSalario()`, `setSalario(double salario)`: Obtém e define o salário base do funcionário.
+### Descrição
+Este projeto implementa um sistema básico de funcionários utilizando Programação Orientada a Objetos (POO) em Java. Ele simula diferentes tipos de funcionários, aplicando bônus salariais específicos para cada cargo.
 
-### **2. `Desenvolvedor`**
-Classe que estende `Funcionario` e representa um desenvolvedor.
+### Classes Implementadas
+1. **Funcionario**
+   - **Atributos**: nome (String), salario (double)
+   - **Métodos**: getNome(), setNome(String nome), getSalario(), setSalario(double salario)
 
-**Atributos:**
-- `bonus` (double) - Bônus de 10% sobre o salário base.
+2. **Desenvolvedor**
+   - Estende a classe Funcionario
+   - **Atributos**: bonus (double) - 10% sobre o salário base
+   - **Métodos**: getBonus(), setBonus(double bonus), getSalario() (sobrescrito)
 
-**Métodos:**
-- `getBonus()`, `setBonus(double bonus)`: Obtém e define o bônus.
-- `getSalario()`: Retorna o salário já ajustado com o bônus.
+3. **Gerente**
+   - Estende a classe Funcionario
+   - **Atributos**: bonus (double) - 15% sobre o salário base
+   - **Métodos**: getBonus(), setBonus(double bonus), getSalario() (sobrescrito)
 
-### **3. `Gerente`**
-Classe que estende `Funcionario` e representa um gerente.
+4. **Main**
+   - Classe principal que testa o sistema de funcionários
 
-**Atributos:**
-- `bonus` (double) - Bônus de 15% sobre o salário base.
+### Funcionamento
+1. O programa cria instâncias de diferentes tipos de funcionários (Gerente e Desenvolvedor).
+2. Define o mesmo salário base (1000) para ambos os funcionários.
+3. Calcula automaticamente o bônus específico para cada cargo (10% para Desenvolvedor, 15% para Gerente).
+4. Exibe o salário final de cada funcionário, já considerando o bônus aplicado.
+5. Demonstra o uso de herança e sobrescrita de métodos para personalizar o comportamento das classes derivadas.
 
-**Métodos:**
-- `getBonus()`, `setBonus(double bonus)`: Obtém e define o bônus.
-- `getSalario()`: Retorna o salário já ajustado com o bônus.
+---
 
-### **4. `Main`**
-A classe principal que testa o sistema de funcionários:
-- Cria um `Gerente` e um `Desenvolvedor`, ambos com salário base de **1000**.
-- Exibe o salário final de cada um, considerando o bônus aplicado.
+<a id="english"></a>
+## English
 
+### Description
+This project implements a basic employee system using Object-Oriented Programming (OOP) in Java. It simulates different types of employees, applying specific salary bonuses for each position.
 
-Este projeto demonstra o uso de **herança** e **sobrescrita de métodos** para personalizar o comportamento das classes derivadas.
+### Implemented Classes
+1. **Funcionario (Employee)**
+   - **Attributes**: name (String), salary (double)
+   - **Methods**: getName(), setName(String name), getSalary(), setSalary(double salary)
+
+2. **Desenvolvedor (Developer)**
+   - Extends the Employee class
+   - **Attributes**: bonus (double) - 10% of the base salary
+   - **Methods**: getBonus(), setBonus(double bonus), getSalary() (overridden)
+
+3. **Gerente (Manager)**
+   - Extends the Employee class
+   - **Attributes**: bonus (double) - 15% of the base salary
+   - **Methods**: getBonus(), setBonus(double bonus), getSalary() (overridden)
+
+4. **Main**
+   - Main class that tests the employee system
+
+### How it works
+1. The program creates instances of different types of employees (Manager and Developer).
+2. Sets the same base salary (1000) for both employees.
+3. Automatically calculates the specific bonus for each position (10% for Developer, 15% for Manager).
+4. Displays the final salary of each employee, already considering the applied bonus.
+5. Demonstrates the use of inheritance and method overriding to customize the behavior of derived classes.

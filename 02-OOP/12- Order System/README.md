@@ -1,53 +1,67 @@
-# 🛍️ Sistema de Pedidos em Java
+# Sistema de Pedidos em Java / Order System in Java
 
-## 🔍 Descrição
-Este projeto implementa um sistema de pedidos utilizando **Programação Orientada a Objetos (POO)** em Java. Ele permite gerenciar clientes, adicionar itens a pedidos e calcular o valor total da compra.
+[Português](#português) | [English](#english)
 
-## 📚 Classes Implementadas
-### **1. `Cliente`**
-Classe que representa um cliente do sistema.
+---
 
-**Atributos:**
-- `idCliente` (int) - Identificação do cliente.
-- `nome` (String) - Nome do cliente.
+<a id="português"></a>
+## Português
 
-**Métodos:**
-- `getIdCliente()`: Obtém o ID do cliente.
-- `getNome()`, `setNome(String nome)`: Obtém e define o nome do cliente.
+### Descrição
+Este projeto implementa um sistema de pedidos utilizando Programação Orientada a Objetos (POO) em Java. Ele permite gerenciar clientes, adicionar itens a pedidos e calcular o valor total da compra.
 
-### **2. `Item`**
-Classe que representa um item disponível para compra.
+### Classes Implementadas
+1. **Cliente**
+   - **Atributos**: idCliente (int), nome (String)
+   - **Métodos**: getIdCliente(), getNome(), setNome(String nome)
 
-**Atributos:**
-- `nome` (String) - Nome do item.
-- `quantidade` (int) - Quantidade do item no pedido.
-- `preco` (double) - Preço unitário do item.
+2. **Item**
+   - **Atributos**: nome (String), quantidade (int), preco (double)
+   - **Métodos**: getNome(), getQuantidade(), getPreco(), exibirInfo()
 
-**Métodos:**
-- `getNome()`: Obtém o nome do item.
-- `getQuantidade()`: Obtém a quantidade do item no pedido.
-- `getPreco()`: Obtém o preço do item.
-- `exibirInfo()`: Exibe as informações do item, incluindo o valor total.
+3. **Pedido**
+   - **Atributos**: numeroPedido (int), cliente (Cliente), itens (ArrayList<Item>)
+   - **Métodos**: getNumeroPedido(), getCliente(), setCliente(Cliente cliente), adicionarItem(Item item), removerItem(Item item), calcularTotal()
 
-### **3. `Pedido`**
-Classe que representa um pedido realizado por um cliente.
+4. **Main**
+   - Classe principal que testa o sistema de pedidos
 
-**Atributos:**
-- `numeroPedido` (int) - Número identificador do pedido.
-- `cliente` (Cliente) - Cliente associado ao pedido.
-- `itens` (ArrayList<Item>) - Lista de itens no pedido.
+### Funcionamento
+1. O programa cria um cliente com ID e nome.
+2. Cria um pedido associado ao cliente com um número identificador.
+3. Adiciona diferentes itens ao pedido, cada um com nome, quantidade e preço.
+4. Permite remover itens do pedido se necessário.
+5. Calcula e exibe o valor total do pedido.
+6. Demonstra o uso de associação de classes, manipulação de listas e encapsulamento para modelar um sistema de pedidos eficiente.
 
-**Métodos:**
-- `getNumeroPedido()`: Obtém o número do pedido.
-- `getCliente()`, `setCliente(Cliente cliente)`: Obtém e define o cliente do pedido.
-- `adicionarItem(Item item)`: Adiciona um item ao pedido.
-- `removerItem(Item item)`: Remove um item do pedido.
-- `calcularTotal()`: Calcula e exibe o valor total do pedido.
+---
 
-### **4. `Main`**
-A classe principal que testa o sistema de pedidos:
-- Cria um cliente e um pedido associado a ele.
-- Adiciona e remove itens do pedido.
-- Calcula e exibe o total da compra.
+<a id="english"></a>
+## English
 
-Este projeto demonstra o uso de **associação de classes**, **manipulação de listas** e **encapsulamento** para modelar um sistema de pedidos eficiente.
+### Description
+This project implements an order system using Object-Oriented Programming (OOP) in Java. It allows managing customers, adding items to orders, and calculating the total purchase value.
+
+### Implemented Classes
+1. **Cliente (Customer)**
+   - **Attributes**: customerId (int), name (String)
+   - **Methods**: getCustomerId(), getName(), setName(String name)
+
+2. **Item**
+   - **Attributes**: name (String), quantity (int), price (double)
+   - **Methods**: getName(), getQuantity(), getPrice(), displayInfo()
+
+3. **Pedido (Order)**
+   - **Attributes**: orderNumber (int), customer (Customer), items (ArrayList<Item>)
+   - **Methods**: getOrderNumber(), getCustomer(), setCustomer(Customer customer), addItem(Item item), removeItem(Item item), calculateTotal()
+
+4. **Main**
+   - Main class that tests the order system
+
+### How it works
+1. The program creates a customer with ID and name.
+2. Creates an order associated with the customer with an identifier number.
+3. Adds different items to the order, each with name, quantity, and price.
+4. Allows removing items from the order if necessary.
+5. Calculates and displays the total order value.
+6. Demonstrates the use of class association, list manipulation, and encapsulation to model an efficient order system.

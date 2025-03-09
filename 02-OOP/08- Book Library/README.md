@@ -1,39 +1,57 @@
-# 📚 Sistema de Biblioteca em Java
+# Sistema de Biblioteca em Java / Library System in Java
 
-## 🔍 Descrição
-Este projeto implementa um sistema de gerenciamento de biblioteca utilizando **Programação Orientada a Objetos (POO)** em Java. Ele permite cadastrar livros, controlar empréstimos e listar os livros disponíveis na biblioteca.
+[Português](#português) | [English](#english)
 
-## 📚 Classes Implementadas
-### **1. `Livro`**
-Classe que representa um livro da biblioteca.
+---
 
-**Atributos:**
-- `titulo` (String) - Título do livro.
-- `autor` (String) - Autor do livro.
-- `emprestado` (boolean) - Indica se o livro está emprestado.
+<a id="português"></a>
+## Português
 
-**Métodos:**
-- `getTitulo()`, `setTitulo(String titulo)`: Obtém e define o título do livro.
-- `getAutor()`, `setAutor(String autor)`: Obtém e define o autor do livro.
-- `isEmprestado()`, `setEmprestado(boolean emprestado)`: Verifica e define o status de empréstimo do livro.
-- `emprestar()`: Marca o livro como emprestado, se disponível.
-- `devolver()`: Marca o livro como disponível, se estiver emprestado.
+### Descrição
+Este projeto implementa um sistema de gerenciamento de biblioteca utilizando Programação Orientada a Objetos (POO) em Java. Ele permite cadastrar livros, controlar empréstimos e listar os livros disponíveis na biblioteca.
 
-### **2. `Biblioteca`**
-Classe que gerencia os livros disponíveis e seus empréstimos.
+### Classes Implementadas
+1. **Livro**
+   - **Atributos**: titulo (String), autor (String), emprestado (boolean)
+   - **Métodos**: getTitulo(), setTitulo(String titulo), getAutor(), setAutor(String autor), isEmprestado(), setEmprestado(boolean emprestado), emprestar(), devolver()
 
-**Atributos:**
-- `nome` (String) - Nome da biblioteca.
-- `livros` (ArrayList<Livro>) - Lista de livros cadastrados.
+2. **Biblioteca**
+   - **Atributos**: nome (String), livros (ArrayList<Livro>)
+   - **Métodos**: getNome(), setNome(String nome), adicionarLivro(Livro livro), listarLivrosDisponiveis()
 
-**Métodos:**
-- `getNome()`, `setNome(String nome)`: Obtém e define o nome da biblioteca.
-- `adicionarLivro(Livro livro)`: Adiciona um livro à biblioteca.
-- `listarLivrosDisponiveis()`: Exibe os livros que não estão emprestados.
+3. **Main**
+   - Classe principal que testa o sistema de biblioteca
 
-### **3. `Main`**
-A classe principal que testa o sistema de biblioteca:
-- Cria uma `Biblioteca` e adiciona livros.
-- Realiza um empréstimo e verifica os livros disponíveis.
+### Funcionamento
+1. O programa cria uma Biblioteca com um nome específico.
+2. Adiciona vários livros ao acervo da biblioteca.
+3. Realiza empréstimos de livros, alterando seu status para emprestado.
+4. Lista os livros que estão disponíveis (não emprestados) no acervo.
+5. Demonstra o uso de encapsulamento, manipulação de listas e gestão de empréstimos para organizar um sistema de biblioteca funcional.
 
-Este projeto demonstra o uso de **encapsulamento**, **manipulação de listas** e **gestão de empréstimos** para organizar um sistema de biblioteca funcional.
+---
+
+<a id="english"></a>
+## English
+
+### Description
+This project implements a library management system using Object-Oriented Programming (OOP) in Java. It allows registering books, controlling loans, and listing available books in the library.
+
+### Implemented Classes
+1. **Livro (Book)**
+   - **Attributes**: title (String), author (String), borrowed (boolean)
+   - **Methods**: getTitle(), setTitle(String title), getAuthor(), setAuthor(String author), isBorrowed(), setBorrowed(boolean borrowed), borrow(), returnBook()
+
+2. **Biblioteca (Library)**
+   - **Attributes**: name (String), books (ArrayList<Book>)
+   - **Methods**: getName(), setName(String name), addBook(Book book), listAvailableBooks()
+
+3. **Main**
+   - Main class that tests the library system
+
+### How it works
+1. The program creates a Library with a specific name.
+2. Adds several books to the library collection.
+3. Performs book loans, changing their status to borrowed.
+4. Lists books that are available (not borrowed) in the collection.
+5. Demonstrates the use of encapsulation, list manipulation, and loan management to organize a functional library system.
